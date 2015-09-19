@@ -132,13 +132,9 @@ void Clock::drawTimeIndicator()
         sf::FloatRect localRect = sprite.getLocalBounds();
         float localWidth = localRect.width;
         float localHeight = localRect.height;
-        sprite.setOrigin(localHeight/2.0f, localHeight/2.0f);
+        sprite.setOrigin(localWidth/2.0f, localHeight/2.0f);
         
         sprite.scale(0.2f, 0.2f);
-        sf::FloatRect rect = sprite.getGlobalBounds();
-        float width = rect.width;
-        float height = rect.height;
-        
         
         sprite.setRotation(second * 6.0f);
         sprite.setPosition(100.0f, 100.0f);
